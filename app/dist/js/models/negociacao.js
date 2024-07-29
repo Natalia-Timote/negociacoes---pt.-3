@@ -11,6 +11,13 @@ export class Negociacao {
         const data = new Date(this._data.getTime());
         return data;
     }
+    paraTexto() {
+        return `
+            Data: ${this.data},
+            Quantidade: ${this.quantidade},
+            Valor: ${this.valor}
+            `;
+    }
     static criaDe(dataString, quantidadeString, valorString) {
         const exp = /-/g;
         const date = new Date(dataString.replace(exp, ','));
